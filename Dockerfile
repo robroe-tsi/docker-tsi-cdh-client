@@ -1,5 +1,5 @@
 # Pull base image.
-FROM bigboards/cdh-base-__arch__
+FROM bigboards/cdh-base-x86_64
 
 MAINTAINER bigboards
 USER root
