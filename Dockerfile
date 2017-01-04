@@ -28,7 +28,7 @@ RUN pip install -U numpy \
 	&& pip install -U pandas-ply \
 	&& pip install -U dplython \
 	&& pip install -U scikit-learn \
-	&& pip install -U requests tabulate future six pytz hdfs python-dateutil influxdb fastavro
+	&& pip install -U requests tabulate future six pytz hdfs python-dateutil influxdb fastavro \
 	&& pip install http://h2o-release.s3.amazonaws.com/h2o/rel-tutte/1/Python/h2o-3.10.2.1-py2.py3-none-any.whl
 
 # declare the volumes
