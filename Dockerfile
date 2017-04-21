@@ -19,6 +19,9 @@ RUN apt-get update \
     && echo "export VISIBLE=now" >> /etc/profile \
 	&& chsh -s /bin/bash bb
 
+# install pip for python 3.X
+RUN apt-get install python3-pip
+
 # Install python-packages
 RUN pip install -U numpy \
 	&& pip install -U matplotlib \
@@ -29,7 +32,19 @@ RUN pip install -U numpy \
 	&& pip install -U dplython \
 	&& pip install -U scikit-learn \
 	&& pip install -U requests tabulate future six pytz hdfs python-dateutil influxdb fastavro \
-	&& pip install http://h2o-release.s3.amazonaws.com/h2o/rel-tutte/1/Python/h2o-3.10.2.1-py2.py3-none-any.whl
+	&& pip install http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/5/Python/h2o-3.10.4.5-py2.py3-none-any.whl
+
+# install packages for python 3
+RUN pip3 install -U numpy \
+	&& pip3 install -U matplotlib \
+	&& pip3 install -U Cython \
+	&& pip3 install -U pandas \
+	&& pip3 install -U happybase \
+	&& pip3 install -U pandas-ply \
+	&& pip3 install -U dplython \
+	&& pip3 install -U scikit-learn \ 
+	&& pip3 install -U requests tabulate future six pytz hdfs python-dateutil influxdb fastavro \
+	&& pip3 install http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/5/Python/h2o-3.10.4.5-py2.py3-none-any.whl
 
 # declare the volumes
 RUN mkdir /etc/hadoop/conf.bb && \
