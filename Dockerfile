@@ -43,7 +43,9 @@ RUN pip3 install -U numpy \
 	&& pip3 install -U happybase \
 	&& pip3 install -U pandas-ply \
 	&& pip3 install -U dplython \
-	&& pip3 install -U scikit-learn \ 
+	&& pip3 install -U scipy \
+	&& pip3 install -U ConfigParser numpy sqlalchemy seaborn ibis py4j sparkts \
+	&& pip3 install -U scikit-learn \
 	&& pip3 install -U requests tabulate future six pytz hdfs python-dateutil influxdb fastavro \
 	&& pip3 install http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/5/Python/h2o-3.10.4.5-py2.py3-none-any.whl
 
