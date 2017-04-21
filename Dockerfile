@@ -8,7 +8,7 @@ ENV NOTVISIBLE "in users profile"
 
 # Install hadoop-client
 RUN apt-get update \
-    && apt-get install -y hadoop-client hbase libssl-dev libffi-dev python-dev python-pip spark-core spark-history-server spark-python pig oozie-client impala-shell openssh-server libfreetype6-dev libpng-dev libjpeg8-dev libfreetype6 libxft-dev tmux vim unzip \
+    && apt-get install -y hadoop-client hbase libssl-dev libffi-dev python-dev python-pip spark-core spark-history-server spark-python pig oozie-client impala-shell openssh-server libfreetype6-dev libpng-dev libjpeg8-dev libfreetype6 libxft-dev tmux vim unzip zip \
     && apt-get clean \
     && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/* \
